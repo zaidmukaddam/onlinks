@@ -1,0 +1,39 @@
+{
+  "manifest_version": 2,
+  "name": "OnLinks",
+  "description": "A browser extension that gathers, organizes, and inspects links.",
+  "homepage_url": "https://www.onlinks.space",
+  "permissions": [
+    "activeTab",
+    "bookmarks",
+    "storage",
+    "https://link-roamer.zaidmukaddam.repl.co/*"
+  ],
+  "background": {
+    "scripts": ["background.ts"],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_icon": {
+      "16": "public/icons/production/16.png",
+      "24": "public/icons/production/24.png",
+      "32": "public/icons/production/32.png"
+    },
+    "default_popup": "public/index.html"
+  },
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Ctrl+U",
+        "mac": "Command+U"
+      }
+    }
+  },
+  "web_accessible_resources": ["public/onboarding.html"],
+  "icons": {
+    "48": "public/icons/production/48.png",
+    "64": "public/icons/production/64.png",
+    "128": "public/icons/production/128.png",
+    "256": "public/icons/production/256.png"
+  }
+}

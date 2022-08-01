@@ -1,0 +1,80 @@
+{
+  "name": "onlinks",
+  "version": "1.0.0",
+  "description": "A browser extension that gathers, organizes, and inspects links.",
+  "scripts": {
+    "release": "cross-env NODE_ENV=production rollup -c",
+    "server": "npx functions-framework --target fetchStatuses --source dist/api",
+    "start": "rollup -c -w",
+    "watch": "npm-watch server"
+  },
+  "watch": {
+    "server": "dist/api/*.js"
+  },
+  "type": "module",
+  "keywords": [
+    "chrome-extension",
+    "web-extension",
+    "typescript",
+    "react",
+    "rollup"
+  ],
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "author": "Zaid Mukaddam",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zaidmukaddam/onlinks/issues"
+  },
+  "homepage": "https://github.com/zaidmukaddam/onlinks#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zaidmukaddam/onlinks.git"
+  },
+  "dependencies": {
+    "@chakra-ui/react": "^1.8.7",
+    "@emotion/react": "^11",
+    "@emotion/styled": "^11",
+    "framer-motion": "^6",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-focus-lock": "^2.8.1",
+    "user-agents": "^1.0.996"
+  },
+  "devDependencies": {
+    "@google-cloud/functions-framework": "^3.1.0",
+    "@rollup/plugin-alias": "^3.1.1",
+    "@rollup/plugin-commonjs": "^17.0.0",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^11.0.1",
+    "@rollup/plugin-replace": "^3.0.0",
+    "@rollup/plugin-typescript": "^8.1.0",
+    "@types/chrome": "^0.0.180",
+    "@types/express": "^4.17.13",
+    "@types/firefox-webext-browser": "^94.0.0",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "@types/user-agents": "^1.0.2",
+    "@typescript-eslint/eslint-plugin": "^4.10.0",
+    "@typescript-eslint/parser": "^4.10.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^7.16.0",
+    "eslint-plugin-react": "^7.21.5",
+    "node-fetch": "^3.2.3",
+    "npm-watch": "^0.11.0",
+    "rollup": "^2.56.3",
+    "rollup-plugin-chrome-extension": "^3.6.1",
+    "rollup-plugin-empty-dir": "^1.0.5",
+    "rollup-plugin-zip": "^1.0.3",
+    "tslib": "^2.0.3",
+    "typescript": "^4.5.0",
+    "webextension-polyfill": "^0.7.0"
+  },
+  "prettier": {
+    "semi": false,
+    "tabWidth": 2,
+    "singleQuote": true,
+    "printWidth": 80
+  }
+}
